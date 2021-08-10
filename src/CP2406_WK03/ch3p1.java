@@ -13,6 +13,24 @@ public class ch3p1 {
     public static void main(String[] args) {
         int[] res = runOnce();
         System.out.println(res[0] +"," + res[1]);
+
+//      itar: shortcut
+        double count = 0;
+        int NUM_RUNS = 1000000;
+        for (int i = 0; i < NUM_RUNS; i++) {
+            res = runOnce();
+            int d1 = res[0];
+            int d2 = res[1];
+            if (d1 == 1 && d2 == 1) {
+                count++;
+                System.out.println("count = " + count);
+            }
+
+        double prob =  count / NUM_RUNS;
+            System.out.println("prob = " + prob);
+            double actual = (1./6) * (1./6);
+            System.out.println("actual = " + actual);
+        }
     }
 
     public static int[] runOnce() {
@@ -28,8 +46,7 @@ public class ch3p1 {
         System.out.println("The second die comes up " + die2);
         System.out.println("Your total roll is " + roll);
 
-        int[] ret = {die1, die2};
-        return ret;
+        return new int[]{die1, die2};
     }  // end main()
 
 }  // end class
