@@ -1,6 +1,6 @@
 package CP2406_WK03;
 
-public class ch3p1 {
+public class Ch3p1 {
     /*
     How many times (on average) do you have to roll a pair of dice before they come up snake eyes?
     You could do the experiment by rolling the dice by hand.
