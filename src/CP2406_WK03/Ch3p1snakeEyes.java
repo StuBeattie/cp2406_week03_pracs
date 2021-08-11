@@ -11,29 +11,29 @@ public class Ch3p1snakeEyes {
      */
 
     public static void main(String[] args) {
-        int[] res = runOnce();
-        System.out.println(res[0] +"," + res[1]);
+        int[] ret = rollOnce();
+        System.out.println(ret[0] +"," + ret[1]);
 
-//      itar: shortcut
+//      itar: shortcut for for loop
         double count = 0;
         int NUM_RUNS = 1000000;
         for (int i = 0; i < NUM_RUNS; i++) {
-            res = runOnce();
-            int d1 = res[0];
-            int d2 = res[1];
+            ret = rollOnce();
+            int d1 = ret[0];
+            int d2 = ret[1];
             if (d1 == 1 && d2 == 1) {
                 count++;
                 System.out.println("count = " + count);
             }
 
         double prob =  count / NUM_RUNS;
-            System.out.println("prob = " + prob);
+            System.out.println("probability = " + prob);
             double actual = (1./6) * (1./6);
             System.out.println("actual = " + actual);
         }
     }
 
-    public static int[] runOnce() {
+    public static int[] rollOnce() {
         int die1;   // The number on the first die.
         int die2;   // The number on the second die.
         int roll;   // The total roll (sum of the two dice).
