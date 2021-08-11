@@ -1,6 +1,5 @@
 package CP2406_WK03;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Ch3p3calculator {
@@ -16,9 +15,24 @@ public class Ch3p3calculator {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your name: ");
-        String username = scanner.next();
-        System.out.println("Hello " + username.toUpperCase());
+        System.out.print("Enter expression: ");
+        double n1 = scanner.nextDouble();
+        System.out.println("n1 = " + n1);
 
+        String op = scanner.next();
+        System.out.println("op = " + op);
+
+        double n2 = scanner.nextDouble();
+        System.out.println("n2 = " + n2);
+
+        double res = 0;
+        switch (op) {
+            case "+" -> res = n1 + n2;
+            case "-" -> res = n1 - n2;
+            case "*" -> res = n1 * n2;
+            case "/" -> res = n1 / n2;
+            default -> System.out.println("are you on drugs????");
+        }
+        System.out.println("Result = " + res);
     }
 }
