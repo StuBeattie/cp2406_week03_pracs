@@ -18,9 +18,23 @@ public class Ch3p2 {
      */
     public static void main(String[] args) {
         countDivisors(100);
+
+        int MAX_IDX = 10000;
+        int maxCount = 0;
+        int bestVal = 0;
+
+        for (int i = 0; i < MAX_IDX; i++) {
+            int n = i + 1;
+            int count = countDivisors(n);
+            if (count > maxCount) {
+                bestVal = n;
+                maxCount = count;
+                System.out.println("best= " + bestVal + ", max= " + maxCount);
+            }
+        }
     }
 
-    public static void countDivisors(int N) {
+    public static int countDivisors(int N) {
         int testDivisor;  // A number between 1 and N that is a
         // possible divisor of N.
         int divisorCount;  // Number of divisors of N that have been found.
@@ -38,9 +52,10 @@ public class Ch3p2 {
             }
         }
 
-        System.out.println();
-        System.out.println("The number of divisors of " + N
-                + " is " + divisorCount);
+//        System.out.println();
+//        System.out.println("The number of divisors of " + N
+//                + " is " + divisorCount);
+        return divisorCount;
 
 
     }   // end main()
