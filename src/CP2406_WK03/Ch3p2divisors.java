@@ -1,6 +1,6 @@
 package CP2406_WK03;
 
-public class Ch3p2 {
+public class Ch3p2divisors {
 
     /*
     Which integer between 1 and 10000 has the largest number of divisors,
