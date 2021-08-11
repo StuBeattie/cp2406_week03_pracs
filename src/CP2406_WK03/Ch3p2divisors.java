@@ -21,7 +21,7 @@ public class Ch3p2divisors {
 
         int MAX_IDX = 10000;
         int maxCount = 0;
-        int bestVal = 0;
+        int bestVal;
 
         for (int i = 0; i < MAX_IDX; i++) {
             int n = i + 1;
@@ -52,9 +52,6 @@ public class Ch3p2divisors {
             }
         }
 
-//        System.out.println();
-//        System.out.println("The number of divisors of " + N
-//                + " is " + divisorCount);
         return divisorCount;
 
 
