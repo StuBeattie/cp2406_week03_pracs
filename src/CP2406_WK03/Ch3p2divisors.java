@@ -51,7 +51,6 @@ public class Ch3p2divisors {
                 numberTested = 0;
             }
         }
-
         return divisorCount;
 
 
