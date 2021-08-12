@@ -33,10 +33,9 @@ This works for any Unicode character.
      */
     public static void main(String[] args) {
 
-
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter text: ");
-        System.out.println("");
+        System.out.print("Enter one line of text: ");
+
         while (scanner.hasNext()) {
             String s = scanner.next();
             s = keepLetters(s);
