@@ -13,26 +13,34 @@ public class Ch3p3calculator {
     The program should end when the user enters 0 as the first number on the line.
      */
     public static void main(String[] args) {
+        System.out.println("Enter expression like 2 + 3 or 10.4 + 7.2");
+        System.out.println("You must use one of the following operators: +, -, *, or /");
+        System.out.println("To exit the program, input 0");
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter expression: ");
-        double n1 = scanner.nextDouble();
-        System.out.println("n1 = " + n1);
 
-        String op = scanner.next();
-        System.out.println("op = " + op);
+            double res = 0;
+            while (true) {
+                Scanner scanner = new Scanner(System.in);
+                System.out.print("Enter expression: ");
+                double n1 = scanner.nextDouble();
+                System.out.println("n1 = " + n1);
+                if (n1 == 0) {
+                    break;
+                }
 
-        double n2 = scanner.nextDouble();
-        System.out.println("n2 = " + n2);
+                String op = scanner.next();
+                System.out.println("op = " + op);
 
-        double res = 0;
-        switch (op) {
-            case "+" -> res = n1 + n2;
-            case "-" -> res = n1 - n2;
-            case "*" -> res = n1 * n2;
-            case "/" -> res = n1 / n2;
-            default -> System.out.println("are you on drugs????");
+                double n2 = scanner.nextDouble();
+                System.out.println("n2 = " + n2);
+            switch (op) {
+                case "+" -> res = n1 + n2;
+                case "-" -> res = n1 - n2;
+                case "*" -> res = n1 * n2;
+                case "/" -> res = n1 / n2;
+                default -> System.out.println("are you on drugs????");
+            }
+            System.out.println("Result = " + res);
         }
-        System.out.println("Result = " + res);
     }
 }
